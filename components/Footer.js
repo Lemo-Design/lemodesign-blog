@@ -61,9 +61,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="py-2">
-                  <Link href="https://lemo-design.com/careers">
-                    <a className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
-                      Careers
+                  <Link href="https://blog.lemo-design.com">
+                    <a className="border-b-4 border-orange-500 transition duration-300 ease-in-out">
+                      Blog
                     </a>
                   </Link>
                 </li>
