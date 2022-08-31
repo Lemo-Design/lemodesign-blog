@@ -1,44 +1,36 @@
-import Link from 'next/link'
-import BLOG from '@/blog.config'
-import { useLocale } from '@/lib/locale'
+import Link from '@/components/Link'
 
-const Pagination = ({ page, showNext }) => {
-  const locale = useLocale()
-  const currentPage = +page
-  let additionalClassName = 'justify-between'
-  if (currentPage === 1 && showNext) additionalClassName = 'justify-end'
-  if (currentPage !== 1 && !showNext) additionalClassName = 'justify-start'
+export default function Pagination({ totalPages, currentPage }) {
+  const prevPage = parseInt(currentPage) - 1 > 0
+  const nextPage = parseInt(currentPage) + 1 <= parseInt(totalPages)
+
   return (
-    <div className={`flex font-medium text-black dark:text-gray-100 ${additionalClassName}`}>
-      {currentPage !== 1 && (
-      <Link
-        href={
-          currentPage - 1 === 1
-            ? `${BLOG.path || '/'}`
-            : `/page/${currentPage - 1}`
-        }
-      >
-        <a>
-          <button
-            rel="prev"
-            className="block cursor-pointer"
-          >
-            ← {locale.PAGINATION.PREV}
+    <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+      <nav className="flex justify-between">
+        {!prevPage && (
+          <button rel="previous" className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
+            Previous
           </button>
-        </a>
-      </Link>
-      )}
-      {showNext && (
-        <Link href={`/page/${currentPage + 1}`}>
-          <a>
-            <button rel="next" className="block cursor-pointer">
-              {locale.PAGINATION.NEXT} →
-            </button>
-          </a>
-        </Link>
-      )}
+        )}
+        {prevPage && (
+          <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
+            <button rel="previous">Previous</button>
+          </Link>
+        )}
+        <span>
+          {currentPage} of {totalPages}
+        </span>
+        {!nextPage && (
+          <button rel="next" className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
+            Next
+          </button>
+        )}
+        {nextPage && (
+          <Link href={`/blog/page/${currentPage + 1}`}>
+            <button rel="next">Next</button>
+          </Link>
+        )}
+      </nav>
     </div>
   )
 }
-
-export default Pagination

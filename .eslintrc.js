@@ -1,27 +1,17 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true,
-    node: true
+    amd: true,
+    node: true,
+    es6: true,
   },
-  extends: ['plugin:react/recommended', 'next', 'standard'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 12,
-    sourceType: 'module'
-  },
-  plugins: ['react'],
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  },
+  extends: ['eslint:recommended', 'plugin:prettier/recommended', 'next', 'next/core-web-vitals'],
   rules: {
-    'react/prop-types': 'off'
+    'prettier/prettier': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 0,
+    'no-unused-vars': 0,
+    'react/no-unescaped-entities': 0,
   },
-  globals: {
-    React: true
-  }
 }
