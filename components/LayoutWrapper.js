@@ -10,8 +10,8 @@ const LayoutWrapper = ({ children }) => {
           <div className="flex">
             <div className="flex-none">
               <div className="cursor-default">
-                <Link href="https://lemo-design.com">
-                  <a className="group flex cursor-pointer transition duration-300 ease-out hover:scale-110">
+                <Link href="https://lemo-design.com" target="_self">
+                  <span className="group flex cursor-pointer transition duration-300 ease-out hover:scale-110">
                     <svg
                       width="35"
                       height="50"
@@ -23,35 +23,35 @@ const LayoutWrapper = ({ children }) => {
                     <h1 className="h-10 text-sm font-semibold leading-10 text-white group-hover:text-orange-500">
                       Lemo-Design
                     </h1>
-                  </a>
+                  </span>
                 </Link>
               </div>
             </div>
             <div className="mt-2 flex-auto text-center">
               <nav>
-                <Link href="https://lemo-design.com/showcases">
-                  <a className="mx-4 cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                <Link href="https://lemo-design.com/showcases" target="_self">
+                  <span className="mx-4 cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                     Showcases
-                  </a>
+                  </span>
                 </Link>
-                <Link href="https://lemo-design.com/services">
-                  <a className="cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                <Link href="https://lemo-design.com/services" target="_self">
+                  <span className="mx-4 cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                     Services
-                  </a>
+                  </span>
                 </Link>
-                <Link href="https://lemo-design.com/about">
-                  <a className="mx-4 cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                <Link href="https://lemo-design.com/about" target="_self">
+                  <span className="mx-4 cursor-pointer text-sm text-white transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                     About us
-                  </a>
+                  </span>
                 </Link>
               </nav>
             </div>
             <div className="flex-none">
               <nav className="transform cursor-pointer transition duration-300 ease-out hover:scale-x-125 hover:scale-y-125">
-                <Link href="https://lemo-design.com/contact">
-                  <a className="rounded-lg border-2 border-white py-2 px-4 font-semibold leading-10 text-white transition-all hover:border-orange-500 hover:bg-orange-500">
+                <Link href="https://lemo-design.com/contact" target="_self">
+                  <span className="rounded-lg border-2 border-white py-2 px-4 font-semibold leading-10 text-white transition-all hover:border-orange-500 hover:bg-orange-500">
                     Contact
-                  </a>
+                  </span>
                 </Link>
               </nav>
             </div>
