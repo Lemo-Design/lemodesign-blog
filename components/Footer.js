@@ -54,24 +54,24 @@ export default function Footer() {
               <h4 className="text-warm-gray-500 text-sm">Who are we</h4>
               <ul className="mt-2">
                 <li className="py-2">
-                  <Link href="/about">
-                    <a className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                  <Link href="https://lemo-design.com/about" target="_self">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                       About us
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li className="py-2">
-                  <Link href="https://blog.lemo-design.com">
-                    <a className="border-b-4 border-orange-500 transition duration-300 ease-in-out">
+                  <Link href="https://blog.lemo-design.com" target="_self">
+                    <span className="border-b-4 border-orange-500 transition duration-300 ease-in-out">
                       Blog
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li className="py-2">
-                  <Link href="https://lemo-design.com/contact">
-                    <a className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                  <Link href="https://lemo-design.com/contact" target="_self">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                       Contact
-                    </a>
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -81,28 +81,25 @@ export default function Footer() {
               <h4 className="text-warm-gray-500 text-sm">Things we do</h4>
               <ul className="mt-2">
                 <li className="py-2">
-                  <Link href="https://lemo-design.com/showcases">
-                    <a className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                  <Link href="https://lemo-design.com/showcases" target="_self">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                       Showcase
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li className="py-2">
-                  <Link href="https://lemo-design.com/services" replace>
-                    <a className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                  <Link href="https://lemo-design.com/services" target="_self">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
                       Services
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li className="py-2">
-                  <a
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                    href="https://helpdesk.lemo-design.com"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Helpdesk
-                  </a>
+                  <Link href="https://helpdesk.lemo-design.com" target="_self">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      Helpdesk
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -111,34 +108,25 @@ export default function Footer() {
               <h4 className="text-warm-gray-500 text-sm">Partners</h4>
               <ul className="mt-2">
                 <li className="py-2">
-                  <a
-                    href="https://lemo-hosting.com"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    Lemo-Hosting
-                  </a>
+                  <Link href="https://lemo-hosting.com" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      Lemo-Hosting
+                    </span>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a
-                    href="https://lemo-design.com"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    Lemo-Print
-                  </a>
+                  <Link href="https://lemo-print.com" rel="noreferrer" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      Lemo-Print
+                    </span>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a
-                    href="https://about.google"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    Google
-                  </a>
+                  <Link href="https://about.google" rel="noreferrer" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      Google
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -149,79 +137,71 @@ export default function Footer() {
             <ul className="mx-auto mt-4 flex w-fit scale-150 md:scale-100">
               <li>
                 <div className="w-fit transform cursor-pointer transition duration-300 ease-out hover:scale-x-125 hover:scale-y-125">
-                  <a
-                    href="https://facebook.com/lemodesign"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 21 21"
-                      className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
-                    >
-                      <path d="M21 10.564c0-2.02-.575-3.996-1.657-5.696A10.52 10.52 0 0 0 14.895.97 10.442 10.442 0 0 0 3.68 2.532 10.57 10.57 0 0 0 .452 7.5a10.627 10.627 0 0 0-.057 5.934 10.574 10.574 0 0 0 3.132 5.03A10.48 10.48 0 0 0 8.859 21v-7.382H6.193v-3.054H8.86V8.236c0-2.648 1.568-4.11 3.966-4.11.788.01 1.573.08 2.351.205v2.601h-1.325a1.51 1.51 0 0 0-1.122.301 1.529 1.529 0 0 0-.588 1.35v1.98h2.909l-.466 3.055h-2.45V21a10.484 10.484 0 0 0 6.348-3.572A10.604 10.604 0 0 0 21 10.564Z"></path>
-                    </svg>
-                  </a>
+                  <Link href="https://facebook.com/lemodesign" rel="noreferrer" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 21 21"
+                        className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
+                      >
+                        <path d="M21 10.564c0-2.02-.575-3.996-1.657-5.696A10.52 10.52 0 0 0 14.895.97 10.442 10.442 0 0 0 3.68 2.532 10.57 10.57 0 0 0 .452 7.5a10.627 10.627 0 0 0-.057 5.934 10.574 10.574 0 0 0 3.132 5.03A10.48 10.48 0 0 0 8.859 21v-7.382H6.193v-3.054H8.86V8.236c0-2.648 1.568-4.11 3.966-4.11.788.01 1.573.08 2.351.205v2.601h-1.325a1.51 1.51 0 0 0-1.122.301 1.529 1.529 0 0 0-.588 1.35v1.98h2.909l-.466 3.055h-2.45V21a10.484 10.484 0 0 0 6.348-3.572A10.604 10.604 0 0 0 21 10.564Z"></path>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </li>
               <li>
                 <div className="mx-3 w-fit transform cursor-pointer transition duration-300 ease-out hover:scale-x-125 hover:scale-y-125">
-                  <a
-                    href="https://instagram.com/lemodesignn"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 20 21"
-                      className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
-                    >
-                      <path d="M15.181 6.368c.663 0 1.2-.564 1.2-1.26 0-.696-.537-1.26-1.2-1.26-.662 0-1.2.564-1.2 1.26 0 .696.538 1.26 1.2 1.26ZM10 15.75c-2.758 0-5-2.355-5-5.25s2.242-5.25 5-5.25 5 2.355 5 5.25-2.242 5.25-5 5.25Zm0-7.875c-1.379 0-2.5 1.177-2.5 2.625s1.121 2.625 2.5 2.625 2.5-1.177 2.5-2.625-1.121-2.625-2.5-2.625Z"></path>
-                      <path d="M15 21H5c-2.57 0-5-2.552-5-5.25V5.25C0 2.551 2.43 0 5 0h10c2.57 0 5 2.551 5 5.25v10.5c0 2.698-2.43 5.25-5 5.25ZM5 2.625c-1.169 0-2.5 1.398-2.5 2.625v10.5c0 1.25 1.309 2.625 2.5 2.625h10c1.169 0 2.5-1.398 2.5-2.625V5.25c0-1.227-1.331-2.625-2.5-2.625H5Z"></path>
-                    </svg>
-                  </a>
+                  <Link href="https://instagram.com/lemodesignn" rel="noreferrer" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 21"
+                        className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
+                      >
+                        <path d="M15.181 6.368c.663 0 1.2-.564 1.2-1.26 0-.696-.537-1.26-1.2-1.26-.662 0-1.2.564-1.2 1.26 0 .696.538 1.26 1.2 1.26ZM10 15.75c-2.758 0-5-2.355-5-5.25s2.242-5.25 5-5.25 5 2.355 5 5.25-2.242 5.25-5 5.25Zm0-7.875c-1.379 0-2.5 1.177-2.5 2.625s1.121 2.625 2.5 2.625 2.5-1.177 2.5-2.625-1.121-2.625-2.5-2.625Z"></path>
+                        <path d="M15 21H5c-2.57 0-5-2.552-5-5.25V5.25C0 2.551 2.43 0 5 0h10c2.57 0 5 2.551 5 5.25v10.5c0 2.698-2.43 5.25-5 5.25ZM5 2.625c-1.169 0-2.5 1.398-2.5 2.625v10.5c0 1.25 1.309 2.625 2.5 2.625h10c1.169 0 2.5-1.398 2.5-2.625V5.25c0-1.227-1.331-2.625-2.5-2.625H5Z"></path>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </li>
               <li>
                 <div className="mr-3 w-fit transform cursor-pointer transition duration-300 ease-out hover:scale-x-125 hover:scale-y-125">
-                  <a
-                    href="https://twitter.com/lemodesign"
-                    rel="noreferrer"
-                    target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 21 17"
-                      className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
-                    >
-                      <path d="M21 1.962c-.788.392-1.575.523-2.494.653.919-.523 1.575-1.307 1.838-2.353-.788.523-1.707.784-2.757 1.046C16.8.523 15.62 0 14.437 0c-2.23 0-4.2 1.962-4.2 4.315 0 .393 0 .654.132.916C6.825 5.1 3.544 3.4 1.444.785 1.05 1.438.919 2.092.919 3.008c0 1.438.787 2.746 1.969 3.53-.657 0-1.313-.261-1.97-.523A4.225 4.225 0 0 0 4.332 10.2c-.394.13-.787.13-1.181.13-.262 0-.525 0-.788-.13a4.25 4.25 0 0 0 4.07 3.008c-1.445 1.177-3.282 1.83-5.382 1.83H0C1.969 16.216 4.2 17 6.563 17c7.875 0 12.206-6.539 12.206-12.162v-.523c.919-.653 1.706-1.438 2.231-2.353Z"></path>
-                    </svg>
-                  </a>
+                  <Link href="https://twitter.com/lemodesign" rel="noreferrer" target="_blank">
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 21 17"
+                        className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
+                      >
+                        <path d="M21 1.962c-.788.392-1.575.523-2.494.653.919-.523 1.575-1.307 1.838-2.353-.788.523-1.707.784-2.757 1.046C16.8.523 15.62 0 14.437 0c-2.23 0-4.2 1.962-4.2 4.315 0 .393 0 .654.132.916C6.825 5.1 3.544 3.4 1.444.785 1.05 1.438.919 2.092.919 3.008c0 1.438.787 2.746 1.969 3.53-.657 0-1.313-.261-1.97-.523A4.225 4.225 0 0 0 4.332 10.2c-.394.13-.787.13-1.181.13-.262 0-.525 0-.788-.13a4.25 4.25 0 0 0 4.07 3.008c-1.445 1.177-3.282 1.83-5.382 1.83H0C1.969 16.216 4.2 17 6.563 17c7.875 0 12.206-6.539 12.206-12.162v-.523c.919-.653 1.706-1.438 2.231-2.353Z"></path>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </li>
               <li>
                 <div className="w-fit transform cursor-pointer transition duration-300 ease-out hover:scale-x-125 hover:scale-y-125">
-                  <a
+                  <Link
                     href="https://linkedin.com/company/lemodesign"
                     rel="noreferrer"
                     target="_blank"
-                    className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 21 21"
-                      className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
-                    >
-                      <path d="M19.956 0H.913A.894.894 0 0 0 0 .919v19.293c0 .394.391.788.913.788h19.174a.894.894 0 0 0 .913-.919V.92C20.87.394 20.478 0 19.956 0ZM6.13 17.85h-3V7.875h3.13v9.975h-.13ZM4.696 6.562c-1.044 0-1.826-.918-1.826-1.837 0-1.05.782-1.837 1.826-1.837 1.043 0 1.826.787 1.826 1.837-.13.919-.913 1.838-1.826 1.838ZM17.739 17.85h-3.13v-4.856c0-1.181 0-2.625-1.566-2.625-1.565 0-1.826 1.312-1.826 2.625v4.987h-3.13V7.875h3v1.313c.391-.788 1.435-1.576 2.87-1.576 3.13 0 3.652 2.1 3.652 4.726v5.512h.13Z"></path>
-                    </svg>
-                  </a>
+                    <span className="transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 21 21"
+                        className="h-6 w-6 fill-white opacity-75 hover:opacity-100"
+                      >
+                        <path d="M19.956 0H.913A.894.894 0 0 0 0 .919v19.293c0 .394.391.788.913.788h19.174a.894.894 0 0 0 .913-.919V.92C20.87.394 20.478 0 19.956 0ZM6.13 17.85h-3V7.875h3.13v9.975h-.13ZM4.696 6.562c-1.044 0-1.826-.918-1.826-1.837 0-1.05.782-1.837 1.826-1.837 1.043 0 1.826.787 1.826 1.837-.13.919-.913 1.838-1.826 1.838ZM17.739 17.85h-3.13v-4.856c0-1.181 0-2.625-1.566-2.625-1.565 0-1.826 1.312-1.826 2.625v4.987h-3.13V7.875h3v1.313c.391-.788 1.435-1.576 2.87-1.576 3.13 0 3.652 2.1 3.652 4.726v5.512h.13Z"></path>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </li>
             </ul>
