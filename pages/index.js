@@ -45,7 +45,7 @@ export default function Home({ posts }) {
                         />
                       </picture>
                     </div>
-                    <div className="my-6 flex flex-wrap text-sm text-gray-400">
+                    <div className="my-6 flex flex-wrap text-sm text-gray-500">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}
@@ -53,7 +53,7 @@ export default function Home({ posts }) {
                     <h2 className="mb-3 text-3xl font-bold transition-all group-hover:text-orange-500">
                       {title}
                     </h2>
-                    <div className="intro mb-6 text-gray-400 transition-all group-hover:text-white">
+                    <div className="intro mb-6 text-lg text-gray-400 transition-all group-hover:text-white">
                       {summary}
                     </div>
                     <div className="flex items-center">
