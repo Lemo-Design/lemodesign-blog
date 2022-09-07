@@ -16,13 +16,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <ScrollTopAndComment />
       <article>
         <div>
-          <header className="mt-32 mb-8 flex">
-            <div className="w-2/12">
+          <header className="mt-32 mb-8 md:flex">
+            <div className="mb-12 w-full md:mb-0 md:w-2/12">
               <Link href={`/`} className="text-white">
                 ← Back
               </Link>
             </div>
-            <div className="w-8/12">
+            <div className="w-full md:w-8/12">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
@@ -49,7 +49,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </div>
             </div>
           </header>
-          <div className="mx-auto w-8/12" style={{ gridTemplateRows: 'auto 1fr' }}>
+          <div className="mx-auto w-full md:w-8/12" style={{ gridTemplateRows: 'auto 1fr' }}>
             <div className="mb-6 w-full overflow-hidden rounded-md bg-black">
               <picture>
                 <img src={images} alt={title} className="w-full" />
