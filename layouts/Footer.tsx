@@ -21,31 +21,31 @@ export default function Footer({ blog }) {
               Lemo-Design
             </h4>
             <p className="mt-6">
-              <a
+              <Link
                 href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#108;&#111;&#064;&#108;&#101;&#109;&#111;&#045;&#100;&#101;&#115;&#105;&#103;&#110;&#046;&#099;&#111;&#109;"
                 rel="noreferrer"
                 className="text-white-alt transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
               >
                 &#104;&#101;&#108;&#108;&#111;&#064;&#108;&#101;&#109;&#111;&#045;&#100;&#101;&#115;&#105;&#103;&#110;&#046;&#099;&#111;&#109;
-              </a>
+              </Link>
             </p>
             <p className="mt-8 py-2 text-white-alt">
               EU Office.{' '}
-              <a
+              <Link
                 href="tel:+3158264242"
                 className="font-semibold transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
               >
                 +31 (0)58 266 42 42
-              </a>
+              </Link>
             </p>
             <p className="py-2 text-white-alt">
               US Office.{' '}
-              <a
+              <Link
                 href="tel:+15032341245"
                 className="font-semibold transition duration-300 ease-in-out hover:border-b-4 hover:border-orange-500"
               >
                 +1 (503) 234 1245
-              </a>
+              </Link>
             </p>
           </div>
 

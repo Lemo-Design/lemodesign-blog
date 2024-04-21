@@ -1,7 +1,7 @@
 import { Article } from 'utils/types';
-import Image from 'next/image';
 import slugify from 'slugify';
 import getLocalizedDate from 'utils/getLocalizedDate';
+import Link from 'next/link';
 
 type Props = {
   article: Article;
@@ -14,7 +14,7 @@ export default function ArticleCard({ article }: Props) {
 
   return (
     <div className="blog-item group cursor-pointer last:-mb-12 overflow-hidden">
-      <a href={`/blog/${slug}`}>
+      <Link href={`/blog/${slug}`}>
         <div className="flex items-center justify-between border-b border-primary-lighter py-3 gap-6 group-hover:bg-primary-darker transition-all px-3">
           <h2 className="w-full text-lg text-white-alt transition-all group-hover:text-orange-500">{article.title}</h2>
           <div className="md:flex md:w-4/12 items-center w-full md:gap-3 my-3 order-2 md:order-2 hidden">
@@ -35,7 +35,7 @@ export default function ArticleCard({ article }: Props) {
             </dl>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

@@ -42,13 +42,11 @@ const ArticlePage = ({
       >
         <div className="md:flex mx-auto w-full max-w-screen-lg md:px-0 pt-6 px-4">
           <div className="h-full w-full mb-6 md:w-1/6">
-            <Link href="/">
-              <a className="flex items-center gap-1 text-sm font-light group hover:opacity-50 transition-all pl-6 relative">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="group-hover:pr-1 transition-all h-4 absolute left-0 top-[1px]">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-                Back <span className="block md:hidden">to blog</span>
-              </a>
+            <Link href="/" className="flex items-center gap-1 text-sm font-light group hover:opacity-50 transition-all pl-6 relative">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="group-hover:pr-1 transition-all h-4 absolute left-0 top-[1px]">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+              Back <span className="block md:hidden">to blog</span>
             </Link>
           </div>
           <div className="w-full md:w-4/6 text-sm">

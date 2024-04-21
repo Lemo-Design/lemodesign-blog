@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
 import 'styles/globals.css';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
       <Toaster />
       <Component {...pageProps} />
+      <Analytics/>
     </>
   );
 }
