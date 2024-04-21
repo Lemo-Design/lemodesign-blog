@@ -16,8 +16,8 @@ export default function ArticleCard({ article }: Props) {
   return (
     <div className="blog-item group cursor-pointer md:mb-12 relative hover:scale-[96%] md:scale-[95%] transition-all">
       <Link href={`/blog/${slug}`}>
-        <div className="scale-105 group-hover:scale-110 transition-all">
-          <div className="bg-gradient-to-t from-primary-darker absolute h-full w-full z-20 opacity-70"></div>
+        <div className="scale-105 group-hover:scale-110 transition-all overflow-hidden">
+          <div className="bg-gradient-to-t from-primary-darker absolute h-full w-full z-20 opacity-90"></div>
           <div
             className="aspect-square rounded-md"
             style={{ 

@@ -29,7 +29,7 @@ export default function Index(props) {
           ))}
         </div>
         <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12 px-3">
-          {filteredArticles.slice(0, 3).map(article => (
+          {filteredArticles.slice(2, 5).map(article => (
             <ArticleCard article={article} key={article.id} />
           ))}
         </div>
