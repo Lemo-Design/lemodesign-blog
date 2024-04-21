@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blog-content a {
+  @apply text-white-alt hover:text-orange-500 transition-all underline-offset-4 decoration-orange-500;
+}
