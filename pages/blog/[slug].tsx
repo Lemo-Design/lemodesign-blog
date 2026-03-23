@@ -112,11 +112,21 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params: { slug } }) => {
-  const data = await getAllArticles(process.env.BLOG_DATABASE_ID);
+export const getStaticProps = async (ctx) => {
+  const slug = ctx.params?.slug;
+  if (!slug || typeof slug !== 'string') {
+    return { notFound: true };
+  }
+
+  const databaseId = process.env.BLOG_DATABASE_ID;
+  const data = await getAllArticles(databaseId);
 
   const page = getArticlePage(data, slug);
-  const result = await getArticlePageData(page, slug, process.env.BLOG_DATABASE_ID);
+  if (!page) {
+    return { notFound: true };
+  }
+
+  const result = await getArticlePageData(page, slug, databaseId);
 
   return {
     props: result,

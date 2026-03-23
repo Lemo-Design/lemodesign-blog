@@ -1,6 +1,8 @@
+import type confetti from 'canvas-confetti';
+import type { CSSProperties } from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
 
-const style: any = {
+const style: CSSProperties = {
   position: 'fixed',
   pointerEvents: 'none',
   width: '100%',
@@ -9,6 +11,15 @@ const style: any = {
   left: 0
 };
 
-export default function ConfettiCanvas({ getInstance }) {
-  return <ReactCanvasConfetti refConfetti={getInstance} style={style} />;
+type Props = {
+  getInstance: (instance: confetti.CreateTypes) => void;
+};
+
+export default function ConfettiCanvas({ getInstance }: Props) {
+  return (
+    <ReactCanvasConfetti
+      onInit={({ confetti }) => getInstance(confetti)}
+      style={style}
+    />
+  );
 }

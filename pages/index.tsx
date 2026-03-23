@@ -51,6 +51,18 @@ const fetchPageBlocks = (pageId: string) => {
 export const getStaticProps = async () => {
   const data = await getAllArticles(process.env.BLOG_DATABASE_ID);
 
+  if (!data.length) {
+    return {
+      props: {
+        data: [],
+        blocks: [],
+        articles: [],
+        categories: []
+      },
+      revalidate: 60
+    };
+  }
+
   const blocks = await fetchPageBlocks(data[0].id);
 
   const { articles, categories } = convertToArticleList(data);

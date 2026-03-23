@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { type ReactNode, useEffect, useState } from 'react';
 import { formatHashLink } from 'utils/formatHashLink';
 
 type Props = {
-  children: JSX.Element;
+  children: ReactNode;
   text: string;
 };
 

@@ -1,18 +1,33 @@
 import { Client } from '@notionhq/client';
 import slugify from 'slugify';
 
+function isNonEmptySecret(value: string | undefined | null): value is string {
+  if (value === undefined || value === null) return false;
+  const t = String(value).trim();
+  return t.length > 0 && t !== 'undefined' && t !== 'null';
+}
+
 export const notion = new Client({
   auth: process.env.NOTION_SECRET
 });
 
-export const getAllArticles = async databaseId => {
-  const response = await notion.databases.query({
-    database_id: databaseId,
+/**
+ * @param databaseId Notion **data source** ID for the blog database (`BLOG_DATABASE_ID` in env).
+ * With @notionhq/client v5 / API `2025-09-03`, `databases.query` is replaced by `dataSources.query`.
+ */
+export const getAllArticles = async (databaseId: string | undefined) => {
+  if (!isNonEmptySecret(databaseId) || !isNonEmptySecret(process.env.NOTION_SECRET)) {
+    return [];
+  }
+
+  const response = await notion.dataSources.query({
+    data_source_id: databaseId,
     filter: {
       property: 'status',
       select: {
         equals: '✅ Published'
-      }
+      },
+      type: 'select'
     }
   });
 
@@ -56,22 +71,31 @@ export const convertToArticleList = (tableData: any) => {
   return { articles, categories };
 };
 
-export const getMoreArticlesToSuggest = async (databaseId, currentArticleTitle) => {
-  const response = await notion.databases.query({
-    database_id: databaseId,
+export const getMoreArticlesToSuggest = async (
+  databaseId: string | undefined,
+  currentArticleTitle: string
+) => {
+  if (!isNonEmptySecret(databaseId) || !isNonEmptySecret(process.env.NOTION_SECRET)) {
+    return [];
+  }
+
+  const response = await notion.dataSources.query({
+    data_source_id: databaseId,
     filter: {
       and: [
         {
           property: 'status',
           select: {
             equals: '✅ Published'
-          }
+          },
+          type: 'select'
         },
         {
           property: 'title',
-          text: {
+          title: {
             does_not_equal: currentArticleTitle
-          }
+          },
+          type: 'title'
         }
       ]
     }

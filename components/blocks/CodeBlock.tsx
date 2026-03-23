@@ -1,4 +1,4 @@
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import { Highlight } from 'prism-react-renderer';
 // import theme from 'prism-react-renderer/themes/nightOwl';
 import { theme } from './outputTheme';
 
@@ -103,7 +103,7 @@ export default function CodeBlock({ code, language, metaString, caption }: Props
   );
   return (
     <div>
-      <Highlight {...defaultProps} code={code} language={language} theme={theme}>
+      <Highlight code={code} language={language} theme={theme}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className="relative not-prose">
             <pre
