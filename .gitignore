@@ -21,7 +21,6 @@ npm-debug.log*
 
 # lock files
 yarn.lock
-package-lock.json
 
 public/sitemap.xml
 public/feed.xml
@@ -45,5 +44,12 @@ public/feed.xml
 /.next/*
 .vercel
 
+# Kamal (same pattern as zenner.io)
+.kamal/secrets
+.kamal/secrets-common
+.kamal/secrets.*
+.kamal/secret
+.kamal/secret-common
+.kamal/secret.*
 
 /resources

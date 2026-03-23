@@ -1,0 +1,14 @@
+.git
+.kamal
+.next
+node_modules
+.cursor
+*.md
+.env
+.env.*
+!.env.example
+npm-debug.log*
+coverage
+.DS_Store
+Thumbs.db
+.vercel

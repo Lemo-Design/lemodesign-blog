@@ -1,0 +1,52 @@
+# Kamal deploy — same host/registry pattern as zenner.io (~/code/zenner.io).
+#
+# .kamal/secrets (gitignored): reuse zenner’s KAMAL_REGISTRY_PASSWORD, then add blog env:
+#   NOTION_SECRET=...
+#   BLOG_DATABASE_ID=...
+# Optional (analytics / newsletter — embed at build time if set):
+#   NEXT_PUBLIC_CONVERTKIT_FORM_ID=
+#   NEXT_PUBLIC_CONVERTKIT_API_KEY=
+#   NEXT_PUBLIC_UMAMI_URL=
+#   NEXT_PUBLIC_UMAMI_ID=
+#
+# GHCR PAT: read:packages + write:packages — export or put in .kamal/secrets as above.
+
+service: lemodesign-blog
+image: lemo-design/lemodesign-blog
+
+servers:
+  web:
+    - 209.38.44.246
+
+ssh:
+  user: 4du2kzm8s84mlamw96vsdvhghcd_b6
+  keys:
+    - /Users/remondevries/.ssh/kamal_client_lemo
+  keys_only: true
+
+registry:
+  server: ghcr.io
+  username: remondevries
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
+  # Optional: add build-time secrets for NEXT_PUBLIC_* (Umami, ConvertKit) via
+  # `builder: secrets:` + Dockerfile RUN --mount=type=secret — see Kamal docs.
+
+env:
+  clear:
+    NODE_ENV: production
+  secret:
+    - NOTION_SECRET
+    - BLOG_DATABASE_ID
+
+proxy:
+  ssl: true
+  host: blog.lemo-design.com
+  forward_headers: true
+  healthcheck:
+    path: /up
+    interval: 3
+    timeout: 10

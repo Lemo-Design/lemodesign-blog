@@ -6,11 +6,11 @@ const siteData = {
   headerDescription: 'Find out the latest and greatest...',
   language: 'en-us',
   locale: 'en-US',
-  ogBanner: 'https://nextjs-notion-blog-starter.vercel.app/preview/1.jpg',
-  github: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
-  twitter: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
-  websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
-  linkedin: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter'
+  ogBanner: 'https://blog.lemo-design.com/preview/1.jpg',
+  github: 'https://github.com/Lemo-Design/lemodesign-blog',
+  twitter: 'https://github.com/Lemo-Design/lemodesign-blog',
+  websiteUrl: 'https://blog.lemo-design.com',
+  linkedin: 'https://github.com/Lemo-Design/lemodesign-blog'
 };
 
 export default siteData;
