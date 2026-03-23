@@ -1,9 +1,9 @@
 {
   "private": true,
-  "description": "Notion-powered blog starter with Nextjs and Tailwind",
-  "repository": "https://github.com/tuanphungcz/nextjs-notion-blog-starter",
-  "homepage": "https://nextjs-notion-blog-starter.vercel.app/",
-  "author": "Tuan Phung <tuan@phung.cz>",
+  "description": "Lemo Design blog — Notion-backed Next.js site",
+  "repository": "https://github.com/Lemo-Design/lemodesign-blog",
+  "homepage": "https://blog.lemo-design.com",
+  "author": "Lemo Design",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
