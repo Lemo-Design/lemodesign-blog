@@ -15,13 +15,28 @@ export const notion = new Client({
  * @param databaseId Notion **data source** ID for the blog database (`BLOG_DATABASE_ID` in env).
  * With @notionhq/client v5 / API `2025-09-03`, `databases.query` is replaced by `dataSources.query`.
  */
+async function resolveDataSourceId(databaseOrDataSourceId: string): Promise<string> {
+  try {
+    await notion.dataSources.retrieve({ data_source_id: databaseOrDataSourceId });
+    return databaseOrDataSourceId;
+  } catch {
+    const db: any = await notion.databases.retrieve({ database_id: databaseOrDataSourceId });
+    const dsId = db?.data_sources?.[0]?.id;
+    if (!dsId) {
+      throw new Error('Notion database has no data_sources; share the DB with the Blog integration.');
+    }
+    return dsId;
+  }
+}
+
 export const getAllArticles = async (databaseId: string | undefined) => {
   if (!isNonEmptySecret(databaseId) || !isNonEmptySecret(process.env.NOTION_SECRET)) {
     return [];
   }
 
+  const dataSourceId = await resolveDataSourceId(databaseId);
   const response = await notion.dataSources.query({
-    data_source_id: databaseId,
+    data_source_id: dataSourceId,
     filter: {
       property: 'status',
       select: {
@@ -79,8 +94,9 @@ export const getMoreArticlesToSuggest = async (
     return [];
   }
 
+  const dataSourceId = await resolveDataSourceId(databaseId);
   const response = await notion.dataSources.query({
-    data_source_id: databaseId,
+    data_source_id: dataSourceId,
     filter: {
       and: [
         {
