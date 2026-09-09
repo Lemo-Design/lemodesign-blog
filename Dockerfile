@@ -13,7 +13,12 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
-RUN npm run build
+# Notion credentials for SSG/ISR at build (Kamal builder.secrets → BuildKit mounts).
+RUN --mount=type=secret,id=NOTION_SECRET \
+    --mount=type=secret,id=BLOG_DATABASE_ID \
+    export NOTION_SECRET="$(cat /run/secrets/NOTION_SECRET)" \
+    && export BLOG_DATABASE_ID="$(cat /run/secrets/BLOG_DATABASE_ID)" \
+    && npm run build
 
 FROM base AS runner
 WORKDIR /app
