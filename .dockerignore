@@ -12,3 +12,5 @@ coverage
 .DS_Store
 Thumbs.db
 .vercel
+electron-asar-*.tgz
+blog.lemo-design.com
