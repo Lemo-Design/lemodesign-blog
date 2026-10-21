@@ -11,7 +11,7 @@ image: lemo-design/lemodesign-blog
 
 servers:
   web:
-    - 46.225.171.3
+    - 100.75.45.22
 
 # Same SSH pattern as kifungo / remondevries: 1Password agent via SSH_AUTH_SOCK.
 ssh:
